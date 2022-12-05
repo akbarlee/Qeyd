@@ -34,10 +34,11 @@ Time Complexity (Zaman mürəkkəbliyi) -  İnput/Outputların ölçüsündən a
 
   Xətti zaman (Linear time) - n qiyməti 0.1n və ya 1000n olsa da fərq olmadan standart ardıcıllıqla artır. Array içində ən böyük və ən kiçik qiyməti tapmağa kömək 
 edir.   
+```
 for (int i = 0; i < n; i++) {
     System.out.println("Nəticə: " + i);
 } 
-
+```
   Sabit zaman (Constant time) - n qiyməti çox böyük qiymətlər alsa belə prosesin çalışma müddəti sabit qalır. O(1) ilə işarə olunur.   N’in aldığı qiymət önəm daşımır. Çünki 1 əməliyyat sabit zaman ilə icra olunur. Məsələn:  
 int n = 1000; 
 System.out.println("Nəticə: " + n); 

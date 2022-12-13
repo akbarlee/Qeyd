@@ -40,7 +40,52 @@ for (int i = 0; i < n; i++) {
 } 
 ```
   Sabit zaman (Constant time) - n qiyməti çox böyük qiymətlər alsa belə prosesin çalışma müddəti sabit qalır. O(1) ilə işarə olunur.   N’in aldığı qiymət önəm daşımır. Çünki 1 əməliyyat sabit zaman ilə icra olunur. Məsələn:  
+   ```
 int n = 1000; 
 System.out.println("Nəticə: " + n); 
+ ```
+  Çoxhədli  zaman  (Polynomial  time) -  n qiyməti artdıqca prosesin icra müddəti eksponensial ( üst qiymət) olaraq artır  
+  Belə bir nümunə göstərək: f(n)<=c*g(n) 
+  f(n)=n^2+2 və g(n)=10n
+ n^2+2<=10n  n0=10 , c=10.                                                          
+  g(n) , O(f(n)) daxilində bütün n qiymətləri 10'dan böyük olduğu zaman true , əks halda false olacaq.
+ Məsələn isInBigO üçün inputu 15 yazaq.   g(n)'in böyümə nisbəti f(n)'dən çox olduğu üçün f(n) = O(g(n)) yazırıq və ya f(n) , g(n)'in big O'sudur deyirik. 
+Nəticəmiz isə true olacaq.
+  ```
+  class isInBigO {
+   
+    public static void main(String[] args) {
+     boolean result = isInBigO(15);
+        System.out.println("Result "+result);
 
-  Çoxhədli  zaman  (Polynomial  time) -  n qiyməti artdıqca prosesin icra müddəti eksponensial ( üst qiymət) olaraq artır 
+    }
+    static int f(int n) {
+        // Return the value of n
+        return n;
+    }
+   static int g(int n) {
+        // Return the square of n
+        return n * n;
+    }
+    public static boolean isInBigO(int n) {
+
+        g (n);
+        f(n);
+
+        // The constant c goes here
+        int c = 2;
+
+        // The constant n0 goes here
+        int n0 = 10;
+
+        // Check if g(n) is in O(f(n)) for all n > n0
+        for (int i = n0; i <= n; i++) {
+            if (f(i) < c * g(i)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+}
+```

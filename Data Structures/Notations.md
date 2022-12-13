@@ -45,9 +45,9 @@ int n = 1000;
 System.out.println("Nəticə: " + n); 
  ```
   Çoxhədli  zaman  (Polynomial  time) -  n qiyməti artdıqca prosesin icra müddəti eksponensial ( üst qiymət) olaraq artır  
-  Belə bir nümunə göstərək: f(n)<=c*g(n) 
-  f(n)=n^2+2 və g(n)=10n
- n^2+2<=10n  n0=10 , c=10.                                                          
+  Belə bir nümunə göstərək: f(n)<=c*g(n)       
+   f(n)=n^2+2 və g(n)=10n             
+   n^2+2<=10n  n0=10 , c=10.                                                          
   g(n) , O(f(n)) daxilində bütün n qiymətləri 10'dan böyük olduğu zaman true , əks halda false olacaq.
  Məsələn isInBigO üçün inputu 15 yazaq.   g(n)'in böyümə nisbəti f(n)'dən çox olduğu üçün f(n) = O(g(n)) yazırıq və ya f(n) , g(n)'in big O'sudur deyirik. 
 Nəticəmiz isə true olacaq.

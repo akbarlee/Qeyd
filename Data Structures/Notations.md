@@ -49,7 +49,7 @@ System.out.println("Nəticə: " + n);
    f(n)=n^2+2 və g(n)=10n             
    n^2+2<=10n  n0=10 , c=10.                                                          
   g(n) , O(f(n)) daxilində bütün n qiymətləri 10'dan böyük olduğu zaman true , əks halda false olacaq.
- Məsələn isInBigO üçün inputu 15 yazaq.   g(n)'in böyümə nisbəti f(n)'dən çox olduğu üçün f(n) = O(g(n)) yazırıq və ya f(n) , g(n)'in big O'sudur deyirik. 
+ Məsələn isInBigO üçün inputu 15 yazaq.   g(n)'in böyümə nisbəti f(n)'dən çox olduğu üçün f(n) ∈ O(g(n)), yazırıq və ya f(n) , g(n)'in big O'sudur (f(n) is order of g(n) ) deyirik. 
 Nəticəmiz isə true olacaq.
   ```
   class isInBigO {
